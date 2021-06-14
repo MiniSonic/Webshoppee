@@ -1,0 +1,81 @@
+:root {
+    --primary-color:#ffbecf;
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --border-color: #dbdbdb;
+    --header-height: 178px;
+    --star-gold-color: #ffce3e;
+    --header-with-search: 112px;
+}
+/* tất cả element  */
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Be Vietnam', sans-serif;
+    box-sizing: border-box;
+}
+img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+/* css btn */
+
+a{
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.margin-bottom-40px{
+    margin-bottom:40px;
+}
+.btn{
+    /* min-width: 142px; */
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn--normal:hover{
+    background-color: rgba(93, 90, 90, 0.25);
+}
+
+/* Sử dụng 1 element có cả 2 class */
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+.btn.btn--disabled{
+    cursor: default;
+    /* Giảm độ sáng */
+    filter: brightness(80%);
+}
+.margin-top-20{
+    margin-top:20px;
+}
+label {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}

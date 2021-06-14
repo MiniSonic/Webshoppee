@@ -1,0 +1,60 @@
+@media (min-width: 1260px) and (max-width: 1600px) {
+    /* chỉnh sửa phần banner quảng cáo */
+    .height_img_banner {
+        height:380px;
+    }
+    /* chỉnh sửa phần category */
+    .category_product_img-link {
+        height: 100px;
+        width: 100px;
+    }
+    .category_product-display-name {
+        font-size: 2rem;
+        height: 2rem;
+    }
+}
+/* Mobile & Tablet */
+@media (max-width: 1259px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+    }
+    .app__container{
+        margin-top: calc(var(--header-height));
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    /* :root{
+        --header-height: 120px;
+        --nav-height: 0px;
+        --header-sort-bar-height: 46px;
+    } */
+    
+}
+/* Moblie */
+@media (max-width: 739px){
+    :root{
+        --header-height: 54px;
+        --nav-height: 0px;
+        --header-sort-bar-height: 46px;
+    }
+    
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height) ;
+        }
+    }
+    
+}
