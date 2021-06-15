@@ -12,6 +12,9 @@
         font-size: 2rem;
         height: 2rem;
     }
+    .row.margin-bottom-40px.hide-on-mobile {
+        margin-top: 10px;
+    }
 }
 /* Mobile & Tablet */
 @media (max-width: 1259px) {
@@ -27,6 +30,27 @@
     }
     .app__container{
         margin-top: calc(var(--header-height));
+    }
+    /* page detail product */
+    .pagination_item {
+        margin: 0;
+
+    }
+    .pagination_item-left,.pagination_item-right {
+        display: block;
+    }
+    ul.content__img__thumbnail {
+        position: relative;
+    }
+    .pagination_item-left {
+        position: absolute;
+        top: 40%;
+        left: 3%;
+    }
+    .pagination_item-right {
+        position: absolute;
+        top: 40%;
+        right: 3%;
     }
 }
 /* Tablet */
@@ -50,8 +74,46 @@
     .header__cart-icon {
         padding-right: 0;
     }
-    
-    
+    .header__accart {
+        padding-left: 40px;
+    }
+    button.acc.btn-black {
+        margin-right: 10px;
+    }
+    /* responsive body */
+    .app-container {
+        margin-top: var(--header-height);
+    }
+    .background-all{
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 0;
+    }
+    .background-content{
+        padding-top: 20px;
+    }
+    .all_category_product{
+        padding-left: 0;
+    }
+    .add-prodcut-mobile-tablet{
+        display: block;
+    }
+    img.category_product_img-link {
+        height: 110px;
+        width: 110px;
+    }
+    span.category_product-display-name {
+        font-size: 2rem;
+        height: 2rem;
+    }
+    .margin-bottom-40px {
+        margin-top: 10px;
+    }
+    img.our-partner_img-link {
+        max-width: 70%;
+    }
+
+    /* footer */
 }
 /* Moblie */
 @media (max-width: 739px){
@@ -85,8 +147,13 @@
     }
     .header__accart{
         height: var(--header-height);
-        margin-left: 140px;
-        padding-top: 10px;
+        
+        float: right;
+        margin: 0;
+        width: auto;
+        padding-right: 10px;
+        padding-top: 15px;
+        
     }
     .btn-black {
         min-width: auto;
@@ -139,9 +206,7 @@
     .header-name-mobile{
         display: block;
     }
-    .add-prodcut-mobile{
-        display: block;
-    }
+    
     .margin-bottom-40px{
         height: 20px;
         border-bottom: 1px solid rgb(155, 154, 154);
@@ -158,7 +223,7 @@
 
     /* ----------------------------------------------------------------------- */
     /* Trang detail product */
-    .pagination_item {
+    /* .pagination_item {
         margin: 0;
 
     }
@@ -177,7 +242,7 @@
         position: absolute;
         top: 40%;
         right: 3%;
-    }
+    } */
     label.control-label.text-label,.button-add-wish-list {
         margin-left: 30px;
         font-size: 2.6rem;
