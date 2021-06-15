@@ -155,4 +155,43 @@
         max-width: 150px;
         margin-bottom: 10px;
     }
+
+    /* ----------------------------------------------------------------------- */
+    /* Trang detail product */
+    .pagination_item {
+        margin: 0;
+
+    }
+    .pagination_item-left,.pagination_item-right {
+        display: block;
+    }
+    ul.content__img__thumbnail {
+        position: relative;
+    }
+    .pagination_item-left {
+        position: absolute;
+        top: 40%;
+        left: 3%;
+    }
+    .pagination_item-right {
+        position: absolute;
+        top: 40%;
+        right: 3%;
+    }
+    label.control-label.text-label,.button-add-wish-list {
+        margin-left: 30px;
+        font-size: 2.6rem;
+    }
+    ul.list_detail,h1 {
+        padding-left: 15px;
+    }
+    h1 {
+        font-size: 3.6rem;
+    }
+    .home-product_price-old{
+        font-size: 1rem;
+    }
+    .home-product_price-current{
+        font-size: 1.6rem;
+    }
 }

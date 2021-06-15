@@ -1079,3 +1079,9 @@ footer{
 .button-group button:first-child {
     margin-right: 10px;
 }
+
+
+/* Css responsive page detail product */
+.pagination_item-left,.pagination_item-right {
+    display: none;
+}

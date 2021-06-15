@@ -21,12 +21,12 @@
         <header class="header">
             <div class="grid wide">
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="#" class="header__logo-link">
-                            <img src="asset/img/header-logoo.png" alt="logo" class="header__logo-img">
+                            <img src="asset/img/header-logoo.png" alt="logo" class="header__logo-img"> 
                         </a>
                     </div>
-                    <div class="header__search">
+                    <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm trong Shop này">
                         </div>
@@ -34,15 +34,234 @@
                             <i class="header__search-icon fas fa-search"></i>
                         </button>
                     </div>
-                    <div class="header__accart">
+                    <!-- Chưa login -->
+                    <!-- <div class="header__accart">
                         <button class="acc btn-black">
                             <i class="header__cart-icon far fa-user"></i>
-                            <span>Tài Khoản</span>
-                        </button>
+                            <span>Đăng kí</span>
+                        </button>              
                         <button class="cart btn-black">
                             <i class="header__cart-icon fas fa-shopping-cart"></i>
                             <span class="header__car-notice">3</span>
-                            <span>Giỏ hàng</span>
+                            <span>Đăng nhập</span>
+                        </button>
+                    </div> -->
+                    <!-- Đã login -->
+                    <div class="header__accart">
+                        <!-- phần search mobile -->
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search">
+                            </i>
+                        </label>
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="mobile__search-checkbox">
+                        <div class="header__search-mobile ">
+                            <div class="header__search-input-wrap-mobile">
+                                <input type="text" class="header__search-input-mobile" placeholder="Tìm trong Shop này">
+                                <!--Search history-->
+                                <div class="header__search-history-mobile">
+                                    <h3 class="header__search-history-heading-mobile">Lịch sử tìm kiếm </h3>
+                                    <ul class="header__search-history-list-mobile">
+                                        <li class="header__search-history-item-mobile">
+                                            <a href="">Kem dưỡng da</a>
+                                        </li>
+                                        <li class="header__search-history-item-mobile">
+                                            <a href="">Điện thoại samsung</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="header__search-btn">
+                                <i class="header__search-icon-mobile fas fa-search"></i>
+                            </button>
+                        </div>
+                        <button class="acc btn-black">
+                            <i class="header__cart-icon far fa-user"></i>
+                            <span class="hide-on-mobile">Tài Khoản</span>
+                            <div class="header__accart_function">
+                                <ul class="header__accart_function_list">
+                                    <li class="header__accart_function_list__item active">
+                                        <a href="#">Trang Tài khoản</a>
+                                    </li>
+                                    <li class="header__accart_function_list__item ">
+                                        <a href="#">Đơn hàng</a>
+                                    </li>
+                                    <li class="header__accart_function_list__item ">
+                                        <a href="#">Wishlist</a>
+                                    </li>
+                                    <li class="header__accart_function_list__item ">
+                                        <a href="#">Địa chỉ</a>
+                                    </li>
+                                    <li class="header__accart_function_list__item ">
+                                        <a href="#">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </button>              
+                        <button class="cart btn-black">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__car-notice">3</span>
+                            <span class="hide-on-mobile">Giỏ hàng</span>
+                            <div class="header__cart-list">
+                                <img src="./asset/img/no_cart.png" alt="" class="header__cart-no--car__img">
+                                <span class="header__cart-list-no--car-title">Chưa có sản phẩm</span>
+                                <!--Cart item view-->
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://img.abaha.vn/photos/resized/320x/73-1573122788-myohui.png" alt="" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-amount">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại hàng: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xoá</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="header__cart-view-car btn btn--primary">Xem giỏ hàng</a>
+                            </div>
                         </button>
                     </div>
                 </div>
@@ -93,9 +312,9 @@
                                         </li>
                                     </ul>
                                     <div class="row">
-                                        <div class="content-all col l-12">
+                                        <div class="content-all col l-12 c-12">
                                             <div class="row">
-                                                <div class="content__img col l-4">
+                                                <div class="content__img col l-4 c-12">
                                                     <ul class="content__img__thumbnail">
                                                         <li>
                                                             <a href="#">
@@ -106,7 +325,7 @@
                                                                 </div>
                                                             </a>
                                                         </li>
-                                                        <div class="row">
+                                                        <div class="row hide-on-mobile">
                                                             <div class="col l-3">
                                                                 <img src="asset/img/inspire-opencart-free-theme-product-05-800x800.jpg"
                                                                     alt="" class="content__img__thumbnail-small">
@@ -124,11 +343,21 @@
                                                                     alt="" class="content__img__thumbnail-small">
                                                             </div>
                                                         </div>
+                                                        <div class="pagination_item-left">
+                                                            <a href="#" class="pagination_item-link">
+                                                                <i class="pagination_item-icon fas fa-angle-left"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="pagination_item-right">
+                                                            <a href="#" class="pagination_item-link">
+                                                                <i class="pagination_item-icon fas fa-angle-right"></i>
+                                                            </a>
+                                                        </div>
                                                     </ul>
                                                 </div>
-                                                <div class="content__info_product col l-8">
+                                                <div class="content__info_product col l-8 c-12">
                                                     <div class="row">
-                                                        <div class="col l-6">
+                                                        <div class="col l-6 c-12">
                                                             <h1>Iphone</h1>
                                                             <hr class="expand">
                                                             <ul class="list_detail">
@@ -146,11 +375,11 @@
                                                                 <div class="form-group">
                                                                     <div class="margin-top-20"></div>
                                                                     <div class="row">
-                                                                        <div class="col l-2">
+                                                                        <div class="col l-2 c-4">
                                                                             <label for="input-quantity "
                                                                                 class="control-label text-label">Mount</label>
                                                                         </div>
-                                                                        <div class="col l-10">
+                                                                        <div class="col l-10 c-8">
                                                                             <div class="form-group_box">
                                                                                 <button
                                                                                     class="form-control pull_left btn-number-reduce btn-minus"
@@ -187,7 +416,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col l-6">
+                                                        <div class="col l-6 c-12">
                                                             <div class="p-p-price-detail">
                                                                 <div class="">
                                                                     Tình trạng:
@@ -319,14 +548,14 @@
                                         </div>
                                         <div class="propage_related_product_list  thummargin">
                                             <div class="row">
-                                                <div class="col l-1">
-                                                    <div class="pagination_item">
+                                                <div class="col l-1 hide-on-mobile">
+                                                    <div class="pagination_item hide-on-mobile">
                                                         <a href="#" class="pagination_item-link">
                                                             <i class="pagination_item-icon fas fa-angle-left"></i>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="col l-2">
+                                                <div class="col l-2 c-6">
                                                     <a class="home-product-item" href="#">
                                                         <div class="home-product_img"
                                                             style="background-image: url('asset/img/product-1.jpg')">
@@ -360,7 +589,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col l-2">
+                                                <div class="col l-2 c-6 ">
                                                     <a class="home-product-item" href="#">
                                                         <div class="home-product_img"
                                                             style="background-image: url('asset/img/product-1.jpg')">
@@ -394,7 +623,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col l-2">
+                                                <div class="col l-2 c-6">
                                                     <a class="home-product-item" href="#">
                                                         <div class="home-product_img"
                                                             style="background-image: url('asset/img/product-1.jpg')">
@@ -428,7 +657,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col l-2">
+                                                <div class="col l-2 c-6">
                                                     <a class="home-product-item" href="#">
                                                         <div class="home-product_img"
                                                             style="background-image: url('asset/img/product-1.jpg')">
@@ -462,7 +691,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col l-2">
+                                                <div class="col l-2 c-6">
                                                     <a class="home-product-item" href="#">
                                                         <div class="home-product_img"
                                                             style="background-image: url('asset/img/product-1.jpg')">
@@ -498,7 +727,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col l-1">
-                                                    <div class="pagination_item">
+                                                    <div class="pagination_item hide-on-mobile">
                                                         <a href="#" class="pagination_item-link">
                                                             <i class="pagination_item-icon fas fa-angle-right"></i>
                                                         </a>
