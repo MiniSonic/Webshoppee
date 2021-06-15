@@ -19,12 +19,12 @@
         <header class="header">
             <div class="grid wide">
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="#" class="header__logo-link">
                             <img src="asset/img/header-logoo.png" alt="logo" class="header__logo-img"> 
                         </a>
                     </div>
-                    <div class="header__search">
+                    <div class="header__search hide-on-mobile">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm trong Shop này">
                         </div>
@@ -46,9 +46,35 @@
                     </div> -->
                     <!-- Đã login -->
                     <div class="header__accart">
+                        <!-- phần search mobile -->
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search">
+                            </i>
+                        </label>
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="mobile__search-checkbox">
+                        <div class="header__search-mobile ">
+                            <div class="header__search-input-wrap-mobile">
+                                <input type="text" class="header__search-input-mobile" placeholder="Tìm trong Shop này">
+                                <!--Search history-->
+                                <div class="header__search-history-mobile">
+                                    <h3 class="header__search-history-heading-mobile">Lịch sử tìm kiếm </h3>
+                                    <ul class="header__search-history-list-mobile">
+                                        <li class="header__search-history-item-mobile">
+                                            <a href="">Kem dưỡng da</a>
+                                        </li>
+                                        <li class="header__search-history-item-mobile">
+                                            <a href="">Điện thoại samsung</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="header__search-btn">
+                                <i class="header__search-icon-mobile fas fa-search"></i>
+                            </button>
+                        </div>
                         <button class="acc btn-black">
                             <i class="header__cart-icon far fa-user"></i>
-                            <span>Tài Khoản</span>
+                            <span class="hide-on-mobile">Tài Khoản</span>
                             <div class="header__accart_function">
                                 <ul class="header__accart_function_list">
                                     <li class="header__accart_function_list__item active">
@@ -72,7 +98,7 @@
                         <button class="cart btn-black">
                             <i class="header__cart-icon fas fa-shopping-cart"></i>
                             <span class="header__car-notice">3</span>
-                            <span>Giỏ hàng</span>
+                            <span class="hide-on-mobile">Giỏ hàng</span>
                             <div class="header__cart-list">
                                 <img src="./asset/img/no_cart.png" alt="" class="header__cart-no--car__img">
                                 <span class="header__cart-list-no--car-title">Chưa có sản phẩm</span>
@@ -268,7 +294,7 @@
             <div class="background-all">
                 <div class="background-content">
                     <div class="grid wide">
-                        <div class="slide-content">
+                        <div class="slide-content hide-on-mobile-tablet">
                          <div class="row slide-content-adver">
                              <div class="col l-9">
                                  <div class="slide-adver-img height_img_banner">
@@ -283,7 +309,7 @@
                              </div>
                          </div>  
                         </div>
-                        <div class="category">
+                        <div class="category hide-on-mobile">
                             <div class="row all_category_product">
                                 <div class="col l-2 all_category_product-display">
                                     <a href="">
@@ -335,19 +361,50 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Dụng cụ &amp; thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Thiết bị điện gia dụng</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Đồ dùng phòng bếp</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Dụng cụ &amp; thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Đồ dùng phòng bếp</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Dụng cụ &amp; thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Thiết bị điện gia dụng</a>
+                                </li>
+                                <li class="mobile-category-item">
+                                    <a href="" class="mobile-category-link">Đồ dùng phòng bếp</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="home-product">
                             <div class="row">
-                                <div class="col l-5">
+                                <div class="col l-5 c-0">
                                     <div class="advertising">
                                         <img src="asset/img/adver-1.jpg" alt="" class="advertising_img-link">
                                     </div>
                                 </div>
-                                <div class="col l-7">
-                                    <div class="header-name">
+                                <div class="col l-7 c-12">
+                                    <div class="header-name hide-on-mobile">
                                         <span>Feature</span>
                                     </div>
+                                    <h2 class="header-name-mobile">
+                                        <span>Tất cả sản phẩm</span>
+                                    </h2>
                                     <div class="row">
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -374,7 +431,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -401,7 +458,34 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
+                                            <a class="home-product-item" href="#">
+                                                <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
+                                                <h4 class="home-product_name">Iphone</h4>
+                                                <div class="home-product_action">
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="home-product_price">
+                                                    <span class="home-product_price-old">250.000d</span>
+                                                    <span class="home-product_price-current">1.000.000d</span>
+                                                </div>
+                                                <div class="button-group">
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col l-4 c-6 add-prodcut-mobile">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -430,7 +514,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -457,7 +541,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -484,7 +568,34 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
+                                            <a class="home-product-item" href="#">
+                                                <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
+                                                <h4 class="home-product_name">Iphone</h4>
+                                                <div class="home-product_action">
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="home-product_price">
+                                                    <span class="home-product_price-old">250.000d</span>
+                                                    <span class="home-product_price-current">1.000.000d</span>
+                                                </div>
+                                                <div class="button-group">
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col l-4 c-6 add-prodcut-mobile">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -514,7 +625,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row margin-bottom-40px">
+                            <div class="row margin-bottom-40px hide-on-mobile">
                                 <div class="col l-8"></div>
                                 <div class="col l-2 nextlist">
                                     <div class="transition">
@@ -524,12 +635,12 @@
                                 </div>
                             </div>
                             <div class="row">                          
-                                <div class="col l-7">
-                                    <div class="header-name">
+                                <div class="col l-7 c-12">
+                                    <div class="header-name hide-on-mobile">
                                         <span>Feature</span>
                                     </div>
                                     <div class="row">
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -556,7 +667,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -583,7 +694,34 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
+                                            <a class="home-product-item" href="#">
+                                                <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
+                                                <h4 class="home-product_name">Iphone</h4>
+                                                <div class="home-product_action">
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="home-product_price">
+                                                    <span class="home-product_price-old">250.000d</span>
+                                                    <span class="home-product_price-current">1.000.000d</span>
+                                                </div>
+                                                <div class="button-group">
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col l-4 c-6 add-prodcut-mobile">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -612,7 +750,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -639,7 +777,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -666,7 +804,34 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col l-4">
+                                        <div class="col l-4 c-6">
+                                            <a class="home-product-item" href="#">
+                                                <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
+                                                <h4 class="home-product_name">Iphone</h4>
+                                                <div class="home-product_action">
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="home-product_price">
+                                                    <span class="home-product_price-old">250.000d</span>
+                                                    <span class="home-product_price-current">1.000.000d</span>
+                                                </div>
+                                                <div class="button-group">
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn--primary">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col l-4 c-6 add-prodcut-mobile">
                                             <a class="home-product-item" href="#">
                                                 <div class="home-product_img" style="background-image: url('asset/img/product-1.jpg')"></div>
                                                 <h4 class="home-product_name">Iphone</h4>
@@ -695,59 +860,59 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col l-5">
+                                <div class="col l-5 hide-on-mobile">
                                     <div class="advertising">
                                         <img src="asset/img/adver-1.jpg" alt="" class="advertising_img-link">
                                     </div>
                                 </div>
                             </div>
                             <div class="row margin-bottom-40px">
-                                <div class="col l-3"></div>
-                                <div class="col l-2 nextlist">
+                                <div class="col l-3 c-0"></div>
+                                <div class="col l-2 nextlist c-0">
                                     <div class="transition">
                                         <a href="" class="transition-link"><i class="transition__icon fas fa-chevron-circle-left"></i></a>
                                         <a href="" class="transition-link"><i class="transition__icon fas fa-chevron-circle-right"></i></a>
                                     </div>
                                 </div>
-                                <div class="col l-7"></div>
+                                <div class="col l-7 c-0"></div>
                             </div>
                         </div>
                         <div class="our-partner">
                             <div class="row">
-                                <div class="col l-5"></div>
-                                <div class="col l-2">
+                                <div class="col l-5 c-0"></div>
+                                <div class="col l-2 c-12">
                                     <div class="header-name">
                                         <span>Our partner</span>
                                     </div>
                                 </div>
-                                <div class="col l-5"></div>
+                                <div class="col l-5 c-0"></div>
                             </div>
                             <div class="row">
-                                <div class="col l-1"></div>
-                                <div class="col l-1">
+                                <div class="col l-1 c-0"></div>
+                                <div class="col l-1 c-12">
                                     <div class="our-partner_img">
                                         <img src="asset/img/our-partner-1.png" alt="" class="our-partner_img-link">
                                     </div>
                                 </div>
-                                <div class="col l-2"></div>
-                                <div class="col l-1">
+                                <div class="col l-2 c-0"></div>
+                                <div class="col l-1 c-12">
                                     <div class="our-partner_img">
                                         <img src="asset/img/our-partner-1.png" alt="" class="our-partner_img-link">
                                     </div>
                                 </div>
-                                <div class="col l-2"></div>
-                                <div class="col l-1">
+                                <div class="col l-2 c-0"></div>
+                                <div class="col l-1 c-12">
                                     <div class="our-partner_img">
                                         <img src="asset/img/our-partner-1.png" alt="" class="our-partner_img-link">
                                     </div>
                                 </div>
-                                <div class="col l-2"></div>
-                                <div class="col l-1">
+                                <div class="col l-2 c-0"></div>
+                                <div class="col l-1 c-12">
                                     <div class="our-partner_img">
                                         <img src="asset/img/our-partner-1.png" alt="" class="our-partner_img-link">
                                     </div>
                                 </div>
-                                <div class="col l-1"></div>
+                                <div class="col l-1 c-0"></div>
                             </div>
                         </div>
                      </div> 
